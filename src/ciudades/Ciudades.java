@@ -1,10 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Ciudades;
-
+// 2.0
 import java.util.Date;
 
 public class Ciudades {
@@ -36,8 +31,24 @@ public class Ciudades {
     public void pagarIva() {
         impuestos = true;
     }
+    
     public void ampliarAreaMetropolitana() {
-        numeroDeBarrios = ;
+        numeroDeBarrios += 10 ;
     }
-}
-
+    
+    public void aumentoDePoblacion() {
+        numeroDeHabitantes += 100000 ;
+    }
+    
+    public void aumentoDePoblacion(int nuevoNumeroDeHabitantes){
+        if(nuevoNumeroDeHabitantes<=this.numeroDeHabitantes){
+            System.out.println("La población no ha aumentado");
+        }else{
+            this.numeroDeHabitantes = nuevoNumeroDeHabitantes;
+            System.out.println("El nuevo número de habitantes son" + 
+                    String.valueOf(nuevoNumeroDeHabitantes) + "personas");
+            }
+        }
+    
+    }
+    
