@@ -1,8 +1,8 @@
-package Ciudades;
-// 2.0
+package ciudad;
+
 import java.util.Date;
 
-public class Ciudades {
+public class Ciudad {
 
     private int numeroDeBarrios;
     private Date fechaDeFundacion;
@@ -11,7 +11,7 @@ public class Ciudades {
     private boolean aeropuertos;
     private boolean democracia;
 
-    public Ciudades(int numeroDeBarrios, Date fechaDeFundacion, boolean impuestos, int numeroDeHabitantes, boolean aeropuertos, boolean democracia) {
+    public Ciudad(int numeroDeBarrios, Date fechaDeFundacion, boolean impuestos, int numeroDeHabitantes, boolean aeropuertos, boolean democracia) {
         this.numeroDeBarrios = numeroDeBarrios;
         this.fechaDeFundacion = fechaDeFundacion;
         this.impuestos = impuestos;
@@ -45,10 +45,13 @@ public class Ciudades {
             System.out.println("La población no ha aumentado");
         }else{
             this.numeroDeHabitantes = nuevoNumeroDeHabitantes;
-            System.out.println("El nuevo número de habitantes son" + 
-                    String.valueOf(nuevoNumeroDeHabitantes) + "personas");
+            System.out.println("El nuevo número de habitantes son: " + 
+                    String.valueOf(nuevoNumeroDeHabitantes) + " personas ");
             }
         }
     
     }
     
+
+
+     
