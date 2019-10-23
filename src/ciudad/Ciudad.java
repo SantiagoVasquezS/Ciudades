@@ -49,6 +49,56 @@ public class Ciudad {
                     String.valueOf(nuevoNumeroDeHabitantes) + " personas ");
             }
         }
+
+    public int getNumeroDeBarrios() {
+        return numeroDeBarrios;
+    }
+
+    public void setNumeroDeBarrios(int numeroDeBarrios) {
+        this.numeroDeBarrios = numeroDeBarrios;
+    }
+
+    public Date getFechaDeFundacion() {
+        return fechaDeFundacion;
+    }
+
+    public void setFechaDeFundacion(Date fechaDeFundacion) {
+        this.fechaDeFundacion = fechaDeFundacion;
+    }
+
+    public boolean isImpuestos() {
+        return impuestos;
+    }
+
+    public void setImpuestos(boolean impuestos) {
+        this.impuestos = impuestos;
+    }
+
+    public boolean isAeropuertos() {
+        return aeropuertos;
+    }
+
+    public void setAeropuertos(boolean aeropuertos) {
+        this.aeropuertos = aeropuertos;
+    }
+
+    public boolean isDemocracia() {
+        return democracia;
+    }
+
+    public void setDemocracia(boolean democracia) {
+        this.democracia = democracia;
+    }
+
+    public int getNumeroDeHabitantes() {
+        return numeroDeHabitantes;
+    }
+
+    public void setNumeroDeHabitantes(int numeroDeHabitantes) {
+        this.numeroDeHabitantes = numeroDeHabitantes;
+    }
+    
+    
     
     }
     
