@@ -11,6 +11,10 @@ public class Ciudad {
     private boolean aeropuertos;
     private boolean democracia;
 
+    public Ciudad(){
+        
+    }
+    
     public Ciudad(int numeroDeBarrios, Date fechaDeFundacion, boolean impuestos, int numeroDeHabitantes, boolean aeropuertos, boolean democracia) {
         this.numeroDeBarrios = numeroDeBarrios;
         this.fechaDeFundacion = fechaDeFundacion;
