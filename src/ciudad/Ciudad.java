@@ -11,9 +11,6 @@ public class Ciudad {
     private boolean aeropuertos;
     private boolean democracia;
 
-    public Ciudad(){
-        
-    }
     
     public Ciudad(int numeroDeBarrios, Date fechaDeFundacion, boolean impuestos, int numeroDeHabitantes, boolean aeropuertos, boolean democracia) {
         this.numeroDeBarrios = numeroDeBarrios;
@@ -23,7 +20,7 @@ public class Ciudad {
         this.aeropuertos = aeropuertos;
         this.democracia = democracia;
     }
-
+    
     public void votarPorAlcalde() {
         democracia = true;
     }
@@ -101,6 +98,9 @@ public class Ciudad {
     public void setNumeroDeHabitantes(int numeroDeHabitantes) {
         this.numeroDeHabitantes = numeroDeHabitantes;
     }
+
+ 
+    
     
     
     
