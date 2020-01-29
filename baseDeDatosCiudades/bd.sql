@@ -6,8 +6,8 @@ create table habitante(
     nitE varchar(20),
 
     primary key(id),
-    foreign key(id_predioC) references casa.id_predio,
-    foreign key(nitE) references empresa.nit
+    foreign key(id_predioC) references casa(id_predio),
+    foreign key(nitE) references empresa(nit)
 );
 
 create table empresa(
@@ -33,7 +33,7 @@ create table casa(
     idH varchar(15),
 
     primary key(id_predio),
-    foreign key(idH) references habitante.id
+    foreign key(idH) references habitante(id)
 );
 
 create table asistencia(
@@ -41,7 +41,9 @@ create table asistencia(
     cod_placasParque varchar(8),
     fecha_hora timestamp,
 
-    primary key
+    primary key(idH,cod_placasParque,fecha_hora),
+    foreign key(idH) references habitante(id),
+    foreign key(cod_placasParque) references parque(cod_placas)
 );
 
 insert into habitante (id,n_hijos,apellido) values 
@@ -50,6 +52,18 @@ insert into habitante (id,n_hijos,apellido) values
 (3,2, 'Caro'),
 (4,3, 'Giraldo'),
 (5,4, 'Urrea');
+
+alter table habitante 
+    add constraint habitante_fk1 foreign key(id_predioC) references casa(id_predio),
+    add constraint habitante_fk2 foreign key(nitE) references empresa(nit)
+
+alter table casa
+    add constraint casa_fk1 foreign key(idH) references habitante(id);
+
+alter table asistencia
+    add constraint asistencia_fk1 foreign key(idH) references habitante(id),
+    add constraint asistencia_fk2 foreign key(cod_placasParque) references parque(cod_placas);
+    
 
 
 
